@@ -15,10 +15,11 @@ New markup:
 * Crabgrass style links (eg <code>[riseup -> http://riseup.net]</code>)
 * Autolinks
 * Markdown blockquotes (>)
-* Setext headers (h1 is formed by under line with ====, h2 underline with ----)
+* Setext headers
+  (h1 is formed by under line with @====@, h2 underline with @----@)
 * Allow embedded video tags, and sanitize these embeds.
 * Tables can use tabs in addition to pipes (|)
-* Insert table of contents with [[toc]]
+* Insert table of contents with @[[toc]]@
 * Add unique clickable anchors to each heading (if to_html is passed option :outline)
 * Pass an optional callback block for rendering links (allows for dead link rendering)
 * Additional way to specify code blocks
@@ -53,7 +54,7 @@ bc. html = GreenCloth.new(test_text,'mygroup').to_html() do |link_data|
   process_link(link_data)
 end
 
-@process_link@ should return either nil or an <a> tag. If nil, then the greencloth
+@process_link@ should return either nil or an @<a>@ tag. If nil, then the greencloth
 default is used.
 
 link_date is a hash that might include: url, label, context_name, page_name
