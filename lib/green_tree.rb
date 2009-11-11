@@ -257,7 +257,7 @@ class GreenTree < Array
 
     Regexp.union(
       /^
-      [\[\]\^@_\*\+\?\-~]* # no whitespace '\s' match should happen here here
+      [ \[\]\^@_\*\+\?\-~]*
       #{heading_text}[\[\]\^@\s_\*\+\?\-~]*
       \s*\r?\n[=-]+\s*?(\r?\n\r?\n?|$)
       /x,
